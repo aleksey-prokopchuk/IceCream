@@ -1,0 +1,47 @@
+body {
+  font-family: var(--main-fonts);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  color: #907e82;
+}
+
+.title {
+  font-family: var(--secondary-fonts);
+  @include fonts(400, 34px, 1.15);
+  text-transform: uppercase;
+
+  color: var(--accent-color);
+
+  @include mq(desktop) {
+    @include fonts(null, 58px, 1.14, 0.06em);
+  }
+}
+
+.subtitle {
+  font-family: var(--secondary-fonts);
+
+  @include fonts(400, 20px, 1.15);
+  text-transform: uppercase;
+
+  color: var(--text-color-light);
+
+  @include mq(desktop) {
+    @include fonts(null, 30px, 1.13);
+  }
+}
+
+// font-family: 'Titan One';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 20px;
+// line-height: 23px;
+
+// /* identical to box height */
+// text-align: center;
+// letter-spacing: 0.04em;
+// text-transform: uppercase;
+
+// color: #ffffff;

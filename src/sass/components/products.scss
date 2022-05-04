@@ -1,0 +1,244 @@
+.products {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  text-align: center;
+
+  &__label {
+    margin-bottom: 15px;
+    font-family: var(--secondary-fonts);
+    @include fonts(400, 18px, 1.16, 0);
+    text-transform: uppercase;
+
+    color: var(--text-color-light-pink);
+
+    @include mq(desktop) {
+      @include fonts(null, 30px, 1.13);
+    }
+  }
+
+  &__list {
+    @include mq(tablet) {
+      display: flex;
+      margin-top: 154px;
+      gap: 16px;
+    }
+    @include mq(desktop) {
+      margin-top: 258px;
+      gap: 16px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    @include mq(mobile-only) {
+      margin-top: 140px;
+      &:first-child {
+        margin-top: 148px;
+      }
+    }
+    padding: 160px 40px 40px;
+    border-radius: 24px;
+
+    @include mq(tablet) {
+      padding-top: 118px;
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+    @include mq(desktop) {
+      padding-top: 161px;
+      padding-right: 72px;
+      padding-left: 72px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -140px;
+
+      width: 280px;
+      height: 280px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translateX(-50%);
+
+      @include mq(tablet) {
+        width: 224px;
+        height: 224px;
+
+        top: -138px;
+      }
+      @include mq(desktop) {
+        width: 394px;
+        height: 394px;
+
+        top: -261px;
+      }
+    }
+
+    &:nth-child(1) {
+      background-color: var(--bg-color-pink);
+      &::before {
+        background-image: url(../images/products/ice-cream_sm.png);
+        background-image: -webkit-image-set(url(../images/products/ice-cream_sm.webp) 1x);
+        @include mq(retina) {
+          background-image: url(../images/products/ice-cream_sm@2x.png);
+          background-image: -webkit-image-set(url(../images/products/ice-cream_sm@2x.webp) 2x);
+        }
+        @include mq(tablet) {
+          background-image: url(../images/products/ice-cream_md.png);
+          background-image: -webkit-image-set(url(../images/products/ice-cream_md.webp) 1x);
+          @include mq(retina) {
+            background-image: url(../images/products/ice-cream_md@2x.png);
+            background-image: -webkit-image-set(url(../images/products/ice-cream_md@2x.webp) 2x);
+          }
+        }
+        @include mq(desktop) {
+          background-image: url(../images/products/ice-cream_lg.png);
+          background-image: -webkit-image-set(url(../images/products/ice-cream_lg.webp) 1x);
+          @include mq(retina) {
+            background-image: url(../images/products/ice-cream_lg@2x.png);
+            background-image: -webkit-image-set(url(../images/products/ice-cream_lg@2x.webp) 2x);
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      background-color: var(--bg-color-coffee);
+      &::before {
+        background-image: url(../images/products/ice-coffee_sm.png);
+        background-image: -webkit-image-set(url(../images/products/ice-coffee_sm.webp) 1x);
+        @include mq(retina) {
+          background-image: url(../images/products/ice-coffee_sm@2x.png);
+          background-image: -webkit-image-set(url(../images/products/ice-coffee_sm@2x.webp) 2x);
+        }
+        @include mq(tablet) {
+          background-image: url(../images/products/ice-coffee_md.png);
+          background-image: -webkit-image-set(url(../images/products/ice-coffee_md.webp) 1x);
+          @include mq(retina) {
+            background-image: url(../images/products/ice-coffee_md@2x.png);
+            background-image: -webkit-image-set(url(../images/products/ice-coffee_md@2x.webp) 2x);
+          }
+        }
+        @include mq(desktop) {
+          background-image: url(../images/products/ice-coffee_lg.png);
+          background-image: -webkit-image-set(url(../images/products/ice-coffee_lg.webp) 1x);
+          @include mq(retina) {
+            background-image: url(../images/products/ice-coffee_lg@2x.png);
+            background-image: -webkit-image-set(url(../images/products/ice-coffee_lg@2x.webp) 2x);
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      background-color: var(--bg-color-green);
+      &::before {
+        background-image: url(../images/products/milkshakes_sm.png);
+        background-image: -webkit-image-set(url(../images/products/milkshakes_sm.webp) 1x);
+        @include mq(retina) {
+          background-image: url(../images/products/milkshakes_sm@2x.png);
+          background-image: -webkit-image-set(url(../images/products/milkshakes_sm@2x.webp) 2x);
+        }
+        @include mq(tablet) {
+          background-image: url(../images/products/milkshakes_md.png);
+          background-image: -webkit-image-set(url(../images/products/milkshakes_md.webp) 1x);
+          @include mq(retina) {
+            background-image: url(../images/products/milkshakes_md@2x.png);
+            background-image: -webkit-image-set(url(../images/products/milkshakes_md@2x.webp) 2x);
+          }
+        }
+        @include mq(desktop) {
+          background-image: url(../images/products/milkshakes_lg.png);
+          background-image: -webkit-image-set(url(../images/products/milkshakes_lg.webp) 1x);
+          @include mq(retina) {
+            background-image: url(../images/products/milkshakes_lg@2x.png);
+            background-image: -webkit-image-set(url(../images/products/milkshakes_lg@2x.webp) 2x);
+          }
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+    &::after {
+      content: '';
+      display: flex;
+      width: 26px;
+      height: 6px;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+
+      background-image: url(../images/svg/dots.svg);
+    }
+  }
+
+  &__description {
+    margin-bottom: 32px;
+    @include fonts(700, 14px, 1.52);
+
+    color: #ffffff;
+    @include mq(tablet) {
+      line-height: 1.76;
+    }
+
+    @include mq(desktop) {
+      @include fonts(null, 16px, null);
+    }
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-image: url(../images/products/products-btn.jpg);
+    background-image: -webkit-image-set(url(../images/products/products-btn.webp) 1x);
+
+    @include mq(retina) {
+      background-image: url(../images/products/products-btn@2x.jpg);
+      background-image: -webkit-image-set(url(../images/products/products-btn@2x.webp) 2x);
+    }
+
+    cursor: pointer;
+  }
+}
+
+//  @include mq(retina) {
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       url(../images/hero/hero_sm@2x.jpg);
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       -webkit-image-set(url(../images/hero/hero_sm@2x.webp) 2x);
+//   }
+
+//   @include mq(tablet) {
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       url(../images/hero/hero_md.jpg);
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       -webkit-image-set(url(../images/hero/hero_md.webp) 1x);
+//     @include mq(retina) {
+//       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//         url(../images/hero/hero_md@2x.jpg);
+//       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//         -webkit-image-set(url(../images/hero/hero_md@2x.webp) 2x);
+//     }
+//   }
+
+//   @include mq(desktop) {
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       url(../images/hero/hero_lg.jpg);
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       -webkit-image-set(url(../images/hero/hero_lg.webp) 1x);
+//     @include mq(retina) {
+//       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//         url(../images/hero/hero_lg@2x.jpg);
+//       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//         -webkit-image-set(url(../images/hero/hero_lg@2x.webp) 2x);
+//     }
+//   }
