@@ -5,9 +5,13 @@
 
 // Стили для файла с примером HTML-фрагмента
 @import './utils/mixins';
+@import './utils/animation';
 @import './base/base';
 @import './base/reset';
 @import './variables/variables';
+
+@import './components/button.scss';
 @import './components/container.scss';
 @import './components/products.scss';
-@import './example';
+@import './components/about.scss';
+// @import './example';

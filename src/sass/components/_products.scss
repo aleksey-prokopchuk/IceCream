@@ -5,15 +5,6 @@
 
   &__label {
     margin-bottom: 15px;
-    font-family: var(--secondary-fonts);
-    @include fonts(400, 18px, 1.16, 0);
-    text-transform: uppercase;
-
-    color: var(--text-color-light-pink);
-
-    @include mq(desktop) {
-      @include fonts(null, 30px, 1.13);
-    }
   }
 
   &__list {
@@ -180,7 +171,7 @@
     margin-bottom: 32px;
     @include fonts(700, 14px, 1.52);
 
-    color: #ffffff;
+    color: var(--text-color-light);
     @include mq(tablet) {
       line-height: 1.76;
     }
@@ -207,38 +198,69 @@
     }
 
     cursor: pointer;
+    // &:hover {
+    //   animation: bounce-top 0.9s both;
+    // }
+  }
+  .modal {
+    position: absolute;
+    top: 253px;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+
+    // height: 50%;
+    padding: 40px;
+
+    background-color: #e17992;
+    border-radius: 0 0 24px 24px;
+
+    opacity: 0;
+    visibility: hidden;
+    // scale: 0.9;
+    transition: 0.3s all;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      // scale: 1;
+    }
+
+    @include mq(tablet-only) {
+      top: 211px;
+    }
+    @include mq(desktop-only) {
+      top: 269px;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      display: flex;
+      padding: 0;
+
+      background-color: transparent;
+      border: none;
+
+      cursor: pointer;
+    }
+
+    &__description {
+      @include fonts(700, 14px, 1.52);
+      color: var(--text-color-light);
+
+      @include mq(tablet) {
+        line-height: 1.76;
+      }
+      @include mq(desktop) {
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.04em;
+      }
+    }
   }
 }
-
-//  @include mq(retina) {
-//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//       url(../images/hero/hero_sm@2x.jpg);
-//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//       -webkit-image-set(url(../images/hero/hero_sm@2x.webp) 2x);
-//   }
-
-//   @include mq(tablet) {
-//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//       url(../images/hero/hero_md.jpg);
-//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//       -webkit-image-set(url(../images/hero/hero_md.webp) 1x);
-//     @include mq(retina) {
-//       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//         url(../images/hero/hero_md@2x.jpg);
-//       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//         -webkit-image-set(url(../images/hero/hero_md@2x.webp) 2x);
-//     }
-//   }
-
-//   @include mq(desktop) {
-//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//       url(../images/hero/hero_lg.jpg);
-//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//       -webkit-image-set(url(../images/hero/hero_lg.webp) 1x);
-//     @include mq(retina) {
-//       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//         url(../images/hero/hero_lg@2x.jpg);
-//       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//         -webkit-image-set(url(../images/hero/hero_lg@2x.webp) 2x);
-//     }
-//   }

@@ -1,0 +1,20 @@
+.button {
+  padding: 13px 37px;
+  @include fonts(700, 14px, 1.29, 0);
+
+  color: var(--accent-color);
+
+  cursor: pointer;
+
+  //   width: 176px;
+  // height: 44px;
+
+  background-color: var(--text-color-light);
+  border: none;
+  border-radius: 22px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--text-color-light-grey);
+  }
+}
